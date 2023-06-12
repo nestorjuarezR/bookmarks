@@ -11,5 +11,13 @@ urlpatterns = [
                                                 name= 'login'),
     path('logout/', auth_views.LogoutView.as_view(
                                                     next_page = "/"),
-                                                    name="logout")
+                                                    name="logout"),
+    #Cambio de contraseña
+    path('password-change/', auth_views.PasswordChangeView.as_view(
+                                                    template_name = "./account/password_change_form.html"),
+                                                    name='password_change'),
+    #Correcto cambio de contraseña
+    path('password-change/done/', auth_views.PasswordChangeDoneView.as_view(
+                                                    template_name = "./account/password_change_done.html"),
+                                                    name='password_change_done')
 ]
