@@ -13,6 +13,7 @@
             <div class="card-panel ">
                 <form action="" method="POST">
                     {% csrf_token %}
+                    
                     <div class=" input-field l4">
                         <i class="material-icons prefix">account_circle</i>
                         <input type="text" placeholder="Ingrese su Usuario" id="username" class="validate"
@@ -42,6 +43,11 @@
                     <div class="section">
                         <div class="center-align">
                             <a href="/registro/">¿No estas registrado aun?</a>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="center-align">
+                            <a href="{% url "password_reset" %}">¿Olvido su contraseña?</a>
                         </div>
                     </div>
                 </form>
