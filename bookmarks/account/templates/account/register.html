@@ -1,0 +1,11 @@
+{% extends "account/index.html" %}
+{% block title %}Registro{% endblock %}
+{% block content %}
+<h1>Crear cuenta</h1>
+<p>Crea una cuenta</p>
+<form action="" method="post">
+    {{ user_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Create my account"></p>
+</form>
+{% endblock %}
