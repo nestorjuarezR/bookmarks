@@ -22,7 +22,7 @@
             <a href="/" class="brand-logo">Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="sass.html">Sass</a></li>
-                <li><a href="registro/">Registro</a></li>
+                <li><a href="/registro/">Registro</a></li>
                 {% if request.user.is_authenticated %}
                     <li><a href="/logout/">Logout</a></li>
                 {% else %}
@@ -34,6 +34,8 @@
 
     <div id="content">
         {% block content %}
+        Hola si deseas cambiar tu contrase: <a href="{%url "password_change" %}">X</a> <br>
+        Si deseas editar tu perfil: <a href="{%url "edit"%}">x</a>
         {% endblock %}
     </div>
 

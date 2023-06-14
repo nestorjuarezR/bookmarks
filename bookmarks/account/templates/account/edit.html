@@ -1,0 +1,11 @@
+{% extends "account/index.html" %}
+{% block title %}Editar{% endblock %}
+{% block content %}
+<h1>Edita tu perfil</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {{ user_form.as_p}}
+    {{ profile_form.as_p }}
+    {% csrf_token %}
+    <p><input type="submit" value="Save change" ></p>
+</form>
+{% endblock %}
